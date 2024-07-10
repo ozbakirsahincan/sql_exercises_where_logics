@@ -25,3 +25,20 @@ select first_name,last_name from actor where first_name in ('Penelope','Nick','E
 -- film tablosunda bulunan tüm sütunlardaki verileri rental_rate 0.99, 2.99, 4.99 VE replacement_cost 12.99, 15.99, 28.99 olma koşullarıyla sıralayınız. ( IN operatörünü kullanınız.)
 select * from film
 where rental_rate  in (0.99,2.99,4.99) and replacement_cost in (12.99,15.99,28.99)
+
+-- Lesson 09 
+
+select * from actor
+where first_name = 'Penelope';
+
+select * from actor a 
+where a.first_name like 'P%';
+
+select * from actor 
+where last_name ilike '%g';
+
+select * from actor 
+where first_name like 'B__';
+
+select * from actor 
+where last_name !~~* '%b%'
